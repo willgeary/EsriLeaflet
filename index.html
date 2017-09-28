@@ -24,11 +24,11 @@
   var map = L.map('map').setView([0,0], 2);
 
   //Loading Basemaps
-  var Gray = L.esri.basemapLayer('Gray').addTo(map);
+  var Gray = L.esri.basemapLayer('Gray');
   var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors'});
   var topo = L.esri.tiledMapLayer({
      url: "https://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer"});
-  var UN = L.esri.tiledMapLayer({url: "https://sgitt-gis-ags1.dfs.un.org/arcgis/rest/services/FSM/eFSM/MapServer"});
+  var UN = L.esri.tiledMapLayer({url: "https://sgitt-gis-ags1.dfs.un.org/arcgis/rest/services/FSM/eFSM/MapServer"}).addTo(map);
 
   var baseMaps = {
     "Esri Gray":Gray,
